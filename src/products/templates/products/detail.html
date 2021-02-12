@@ -2,10 +2,17 @@
 
 
 {% block content %}
+<div class='container'>
+    <div class='row'>
+        <div class='col'>
     {{ object.title }}<br />
+    {{ object.timestamp|timesince }} ago</br>
     {{ object.description }}<br/>
     {% if object.image %}
         <img src="{{ object.image.url }}" class='img-fluid' height=300 width=300 /><br/>
     {% endif %}
     {{ object.price }}
+    </div>
+    </div>
+    </div>
 {% endblock %}
